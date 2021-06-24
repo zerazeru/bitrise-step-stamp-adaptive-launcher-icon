@@ -21,14 +21,18 @@ inputs:
     opts:
       title: Path to vector drawable
       summary: Relative path to the foreground layer drawable of the adaptive icon (must be a VectorDrawable XML)
+      is_expand: true
   - overlay_text: $BITRISE_BUILD_NUMBER
     opts:
       title: Overlay text
+      is_expand: true
   - overlay_text_color: "#ffffffff"
     opts:
       title: Overlay text color
       description: "in any format that is valid in a VectorDrawable resource like `#RRGGBB` or `#AARRGGBB`"
+      is_expand: true
   - overlay_background_color: "#88000000"
     opts:
       title: Overlay background color
       description: "in any format that is valid in a VectorDrawable resource like `#RRGGBB` or `#AARRGGBB`"
+      is_expand: true
