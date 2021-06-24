@@ -1,0 +1,34 @@
+title: Stamp adaptive launcher icon
+summary: |
+  Adds an overlay text to the adaptive launcher icon of your Android app
+website: https://github.com/zerazeru/bitrise-step-stamp-adaptive-launcher-icon
+source_code_url: https://github.com/zerazeru/bitrise-step-stamp-adaptive-launcher-icon
+support_url: https://github.com/zerazeru/bitrise-step-stamp-adaptive-launcher-icon/issues
+project_type_tags:
+  - android 
+  - xamarin
+  - react-native
+  - cordova
+  - ionic
+  - flutter
+type_tags:
+  - utility
+toolkit:
+  bash:
+    entry_file: step.sh
+inputs:
+  - foreground_layer_drawable_path: android/app/src/main/res/drawable/ic_launcher_foreground.xml
+    opts:
+      title: Path to vector drawable
+      summary: Relative path to the foreground layer drawable of the adaptive icon (must be a VectorDrawable XML)
+  - overlay_text: $BITRISE_BUILD_NUMBER
+    opts:
+      title: Overlay text
+  - overlay_text_color: "#ffffffff"
+    opts:
+      title: Overlay text color
+      description: "in any format that is valid in a VectorDrawable resource like `#RRGGBB` or `#AARRGGBB`"
+  - overlay_background_color: "#88000000"
+    opts:
+      title: Overlay background color
+      description: "in any format that is valid in a VectorDrawable resource like `#RRGGBB` or `#AARRGGBB`"
