@@ -1,5 +1,4 @@
 const fs = require('fs');
-const path = require('path');
 const makerjs = require('makerjs');
 const opentype = require('opentype.js');
 
@@ -10,7 +9,7 @@ const {
     overlay_background_color,
 } = process.env;
 
-const fontPath = path.join(__dirname, 'node_modules/@fontsource/lato/files/lato-latin-700-normal.woff');
+const fontPath = require.resolve('@fontsource/lato/files/lato-latin-700-normal.woff');
 const font = opentype.loadSync(fontPath);
 const textModel = new makerjs.models.Text(font, overlay_text, 18);
 const svg = makerjs.exporter.toSVG(textModel, {
